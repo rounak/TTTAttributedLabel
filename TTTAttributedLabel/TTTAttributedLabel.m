@@ -1252,6 +1252,11 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
     _inactiveLinkAttributes = convertNSAttributedStringAttributesToCTAttributes(inactiveLinkAttributes);
 }
 
+- (void)setTextInsets:(UIEdgeInsets)textInsets {
+    _textInsets = textInsets;
+    [self invalidateIntrinsicContentSize];
+}
+
 #pragma mark - UILabel
 
 - (void)setHighlighted:(BOOL)highlighted {
